@@ -40,4 +40,41 @@ body
 
 }
 
+/* Área que contém todos os animais */
+#mostrar_animais {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
 
+/* Card individual */
+.card_mostrar_animal {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+/* Nome do animal */
+.card_mostrar_animal h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Informações do animal */
+.card_mostrar_animal p {
+    color: #666;
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+/* Efeito ao passar o mouse */
+.card_mostrar_animal:hover {
+    transform: translateY(-4px);
+}

@@ -1,42 +1,31 @@
 const SUPABASE_URL = "https://rsmbcpenltekhivxzfox.supabase.co";
 const SUPABASE_KEY = "sb_publishable_ZVT2D5qWYxLLrODuyWs_cw_n4qLArrB";
 
-const supabaseClient = window.supabase.createClient(
+export const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
 );
 
-
 // ELEMENTOS
-
 const login = document.getElementById("login");
-
 const usuarioLogado =
     document.getElementById("usuarioLogado");
-
 const emailUsuario =
     document.getElementById("emailUsuario");
-
 const email =
     document.getElementById("email");
-
 const senha =
     document.getElementById("senha");
-
 const mensagem =
     document.getElementById("mensagem");
 
-
 // BOTÕES
-
 document
     .getElementById("btnLogin")
     .addEventListener("click", entrar);
-
 document
     .getElementById("btnCadastro")
     .addEventListener("click", cadastrar);
-
 document
     .getElementById("btnLogout")
     .addEventListener("click", sair);
@@ -82,7 +71,6 @@ async function entrar() {
             "E-mail ou senha incorretos.";
         return;
     }
-
     console.log("Usuário logado:", data.user);
     mostrarUsuario(data.user);
 }
@@ -102,13 +90,11 @@ async function cadastrar() {
         return;
     }
 
-
     if (senhaDigitada.length < 6) {
         mensagem.innerText =
             "A senha precisa ter pelo menos 6 caracteres.";
         return;
     }
-
 
     const { data, error } =
         await supabaseClient.auth.signUp({
@@ -116,7 +102,6 @@ async function cadastrar() {
             password: senhaDigitada
 
         });
-
 
     if (error) {
         console.error(error);

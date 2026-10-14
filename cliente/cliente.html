@@ -19,19 +19,22 @@
         <div>
             <h2>🐶 Meus animais</h2>
             <form>
-                <input type="text" placeholder="Nome" id="nome">
-                <input type="number" placeholder="idade" id="idade">
-                <input type="text" placeholder="raça" id="raca">
-                <select id="sexo">
+                <input type="text" placeholder="Nome" id="id_nome">
+                <input type="number" placeholder="idade" id="id_idade">
+                <input type="text" placeholder="raça" id="id_raca">
+                <select id="id_sexo">
                     <option value="Fêmea">Fêmea</option>
                     <option value="Macho">Macho</option>
                 </select>
                 <button id="btn_animal_cadastro">+ Cadastrar animal</button>
             </form>
         </div>
-        <div id="aparecer_animais">
-        </div>
+        <div id="mostrar_animais"></div>
     </main>
-</body>
 
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- JS -->
+    <script src="larpets.js"></script>
+</body>
 </html>
