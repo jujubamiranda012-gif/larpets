@@ -1,7 +1,7 @@
 const SUPABASE_URL = "https://rsmbcpenltekhivxzfox.supabase.co";
 const SUPABASE_KEY = "sb_publishable_ZVT2D5qWYxLLrODuyWs_cw_n4qLArrB";
 
-export const supabaseClient = window.supabase.createClient(
+const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
 );
