@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento Veterinário</title>
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+
+    <div>
+        <a href="../cliente.html">Voltar</a>
+        <h1>Agendamento de Consultas</h1>
+    </div>
+
+    <form>
+        <label>Nome do dono:</label><br>
+        <input type="text" name="dono" required id="nome_agendamento">
+        <br><br>
+
+        <label>Nome do animal:</label><br>
+        <input type="text" name="animal" required id="animal_agendamento">
+        <br><br>
+
+          <label>Raça:</label><br>
+        <input type="text" name="animal" required id="raca_agendamento">
+        <br><br>
+
+        <label>Telefone:</label><br>
+        <input type="tel" name="telefone" required id="telefone_agendamento">
+        <br><br>
+
+        <label>Data da consulta:</label><br>
+        <input type="date" name="data" required id="data_agendamento">
+        <br><br>
+
+        <label>Horário:</label><br>
+        <input type="time" name="horario" required id="horario_agendamento">
+        <br><br>
+
+        <label>Motivo da consulta:</label><br>
+        <textarea name="motivo" rows="4" id="motivo_agendamento"></textarea>
+        <br><br>
+
+        <button id="butao_agendamento">Agendar Consulta</button>
+    </form>
+
+     <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="agendamento.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4ff;
+    margin: 0;
+    padding: 30px;
+    color: #333;
+}
+
+/* Cabeçalho */
+div {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #4f46e5;
+}
+
+/* Link voltar */
+a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Formulário */
+form {
+    background-color: white;
+    max-width: 450px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #00000015;
+}
+
+/* Textos dos campos */
+label {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Campos de entrada */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Destaque ao clicar nos campos */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+/* Botão de agendamento */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4338ca;
+}

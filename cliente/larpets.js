@@ -12,19 +12,29 @@ const var_idade = document.getElementById ("id_idade")
 const var_raca = document.getElementById ("id_raca")
 const var_sexo = document.getElementById ("id_sexo")
 
-
 btnAnimaisCadastro.addEventListener("click", clicarCadastro);
+
 
 async function clicarCadastro (event){
     // impede de apagar os dados do formulário
     event.preventDefault();
+
+    // Verificar quem está logado
+    const {data: usuarioData,error: }= await supabaseClient.auth.getUser()
+    if (errorData || !usuarioData.user) {
+        alert("Você não está logado");
+        return;
+    }
+
+    const usuario = usuarioData.user
     
     // Capturar os dados digitados
     const animal = {
-        nome: var_nome.value,
+        nome: var_nome.value, 
         idade: var_idade.value,
         raca: var_raca.value,
         sexo: var_sexo.value,
+        id_dono: usuario.id
     }
 
     // Validação dos campos
@@ -32,8 +42,6 @@ async function clicarCadastro (event){
         alert("Preencha todos os campos");
         return;
     }
-
-    console.log(animal)
 
     try {
         // inserir dados no banco
@@ -59,9 +67,18 @@ async function clicarCadastro (event){
 
 const mostrarAnimais = document.getElementById ("mostrar_animais")
 async function aparecerAnimais () {
+    const {data: usuarioData, error: errorData } = await supabaseClient.auth.getUser()
+
+   if (errorData || !usuarioData.user) {
+    alert("Você não está logado");
+    return;
+}
+    
     const {data,error} = await supabaseClient
     .from("animais")
     .select("*")
+    .eq ("id_dono",usuarioData.user.id)
+
 
     if (error){
         console.error ("erro ao buscar animais",error);

@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-body
-{
+body {
     font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
 }
 
-#header_cliente 
-{
+#header_cliente {
     background-color: #4f46e5;
     color: white;
     font-size: large;
@@ -18,24 +16,23 @@ body
 
 }
 
-#main_clientes button
-{
+#main_clientes button {
     color: white;
     background-color: #4f46e5;
     padding: 10px;
     border-radius: 10px;
 }
 
-#main_clientes div
-{
-    display: flex;justify-content: space-between ;
+#main_clientes div {
+    display: flex;
+    justify-content: space-between;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     padding: 30px;
     border-radius: 15px;
-   
-} 
-#main_clientes
-{
+
+}
+
+#main_clientes {
     padding: 90px;
 
 }
@@ -78,3 +75,12 @@ body
 .card_mostrar_animal:hover {
     transform: translateY(-4px);
 }
+
+#btn_agendamento {
+    color: white;
+    background-color: #4f46e5;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+

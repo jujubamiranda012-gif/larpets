@@ -11,13 +11,17 @@
 <body>
     <header id="header_cliente">
         <h1>LARpets</h1>
-        <div>Olá Ana! </div>
+        <div>Olá!</div>
     </header>
 
     <main id="main_clientes">
         <h2>Área do cliente</h2>
+
+        <a id="btn_agendamento" href="agendamento/agendamento.html">Agendar consulta</a>
+
         <div>
             <h2>🐶 Meus animais</h2>
+
             <form>
                 <input type="text" placeholder="Nome" id="id_nome">
                 <input type="number" placeholder="idade" id="id_idade">
@@ -29,7 +33,7 @@
                 <button id="btn_animal_cadastro">+ Cadastrar animal</button>
             </form>
         </div>
-        <div id="mostrar_animais"></div>
+        <div id="mostrar_animais"> </div>
     </main>
 
     <!-- SUPABASE -->
@@ -37,4 +41,5 @@
     <!-- JS -->
     <script src="larpets.js"></script>
 </body>
+
 </html>
